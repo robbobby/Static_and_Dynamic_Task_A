@@ -8,8 +8,8 @@ class TestCardGame(unittest.TestCase):
         
         # Cards
         self.card1 = Card("Hearts", 7)
-        self.card2 = Card("Hearts", 2)
-        self.card3 = Card("Hearts", 1)
+        self.card2 = Card("Spades", 2)
+        self.card3 = Card("Diamons", 1)
 
         self.cards = [self.card1, self.card2, self.card3]
 
@@ -19,7 +19,7 @@ class TestCardGame(unittest.TestCase):
 
     def test_highest_card(self):
         highest_card = CardGame.highest_card(self, self.card1, self.card2)
-        self.assertEqual("Hearts", highest_card.suit)
+        self.assertEqual(7, highest_card.value)
 
     def test_cards_total(self):
         cards_total = CardGame.cards_total(self, self.cards)
